@@ -1,6 +1,13 @@
 # Perform simple arithmetic encoded in an input string:
 # '1 + 2' -> 3, or '1 - 2' -> -1.
 def compute(expression):
+    """
+    Perform simple arithmetic encoded in an input string. 
+    '1 + 2' -> 3, or '1 - 2' -> -1.
+
+    Keyword arguments:
+    expression -- a string containing two integers and an operator
+    """
     num0, operator, num1 = expression.split(' ')
     num0, num1 = int(num0), int(num1)
     if operator == '+':
@@ -14,3 +21,9 @@ def compute(expression):
     else:
         print('unknown operator!')
         return None
+
+
+test = compute('1 + 2')
+print(test)
+    
+    
